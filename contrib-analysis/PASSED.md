@@ -13,3 +13,4 @@
 | 6 | R2 | fix(sdk-py): empty values (`ids=[]`, `description=""`) dropped by truthiness checks | 6.5 | L2-4+L2-6 combined. Check server semantics (empty ids -> return empty without a request) |
 | 7 | R2 | fix(cli): `dockerfile --add-docker-compose` honors config `env` | 6.4 | Check against closed PR #9063 |
 | 8 | R2 | fix(checkpoint-sqlite): `SqliteStore` binds `expires_at` with the deprecated datetime adapter | 6.2 | Python 3.12+ DeprecationWarning. Watch for conflicts with #8806, #9558 |
+| 9 | R3 | fix(cli): `langgraph new` handles network errors, bad archives, and file paths | 5.6 | L3-1+L3-2 combined. Find out why #8075/#8111 were closed |
