@@ -9,3 +9,7 @@
 | 2 | R1 | docs(sdk-py): fix `join_stream`/`join` docstrings and examples (async iteration, return types, `stream_mode`) | 7.4 | L1-4/5/6 combined; cite #5442 |
 | 3 | R1 | feat(cli): `--json` for `deploy revisions list` | 6.4 | Parity with #9395, #9243. No feature template, so explain parity in the bug template or ask a maintainer |
 | 4 | R1 | fix(langgraph): `StateGraph.add_edge([], node)` should raise | 5.8 | Same check as `add_sequence` |
+| 5 | R2 | fix(cli): escape config values in generated Dockerfile `ENV` and compose YAML | 7.4 | L2-1+L2-2 combined. Single quotes / backslashes / double quotes |
+| 6 | R2 | fix(sdk-py): empty values (`ids=[]`, `description=""`) dropped by truthiness checks | 6.5 | L2-4+L2-6 combined. Check server semantics (empty ids -> return empty without a request) |
+| 7 | R2 | fix(cli): `dockerfile --add-docker-compose` honors config `env` | 6.4 | Check against closed PR #9063 |
+| 8 | R2 | fix(checkpoint-sqlite): `SqliteStore` binds `expires_at` with the deprecated datetime adapter | 6.2 | Python 3.12+ DeprecationWarning. Watch for conflicts with #8806, #9558 |
